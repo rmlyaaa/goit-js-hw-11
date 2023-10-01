@@ -56,15 +56,15 @@ async function fetchImages() {
         const card = document.createElement('div');
         card.classList.add('photo-card');
         card.innerHTML = ` 
-                 
-                    <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
+                  <a href="${image.largeImageURL}">
+                     <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
+                  </a>
                     <div class="info">
                         <p class="info-item"><b>Лайки:</b> ${image.likes}</p>
                         <p class="info-item"><b>Перегляди:</b> ${image.views}</p>
                         <p class="info-item"><b>Коментарі:</b> ${image.comments}</p>
                         <p class="info-item"><b>Завантаження:</b> ${image.downloads}</p>
                     </div>
-                  
                 `;
         gallery.appendChild(card);
       });
