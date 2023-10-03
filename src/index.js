@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (page < totalPages) {
           loadMoreButton.style.display = 'block';
         } else {
+          Notiflix.Notify.success('Ви доскроллили до кінця! Вітаю!.');
           loadMoreButton.style.display = 'none';
         }
 
